@@ -1,6 +1,6 @@
 "use client"
 
-import { Zap } from "lucide-react"
+import { CheckCircle2, UploadCloud, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -11,9 +11,13 @@ export type NavItem = (typeof navItems)[number]
 export function Navbar({
   active,
   onChange,
+  cvName,
+  onUploadClick,
 }: {
   active: NavItem
   onChange: (item: NavItem) => void
+  cvName: string | null
+  onUploadClick: () => void
 }) {
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-card/80 backdrop-blur">
@@ -44,7 +48,18 @@ export function Navbar({
           ))}
         </ul>
 
-        <Button className="shrink-0 font-semibold">Tải CV Ngay</Button>
+        <div className="flex shrink-0 items-center gap-3">
+          {cvName && (
+            <span className="hidden items-center gap-1.5 text-xs font-medium text-muted-foreground sm:flex">
+              <CheckCircle2 className="size-4 text-primary" aria-hidden="true" />
+              <span className="max-w-[10rem] truncate">{cvName}</span>
+            </span>
+          )}
+          <Button className="font-semibold" onClick={onUploadClick}>
+            <UploadCloud className="size-4" aria-hidden="true" />
+            {cvName ? "Tải CV khác" : "Tải CV Ngay"}
+          </Button>
+        </div>
       </nav>
     </header>
   )
