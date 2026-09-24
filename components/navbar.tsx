@@ -24,7 +24,7 @@ export function Navbar({
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2">
           <Zap className="size-6 fill-primary text-primary" aria-hidden="true" />
-          <span className="text-lg font-bold tracking-tight text-primary">TechSkill Radar</span>
+          <span className="text-lg font-bold tracking-tight text-primary">Career Lens</span>
         </div>
 
         <ul className="hidden items-center gap-8 md:flex">
