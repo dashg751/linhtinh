@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'TechSkill Radar — Tổng quan Thị trường',
+  title: 'Career Lens — Tổng quan Thị trường',
   description: 'Dashboard phân tích thị trường tuyển dụng và kỹ năng công nghệ',
   generator: 'v0.app',
   icons: {
